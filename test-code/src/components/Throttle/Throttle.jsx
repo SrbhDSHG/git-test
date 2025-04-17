@@ -16,14 +16,12 @@ function Throttle() {
   }
 
   const handleClick = () => {
-    const time = new Date().toLocaleTimeString()
-    console.log('🚀 Button clicked at', time)
+    const time = new Date().now
+    console.log(`Button Clicked at, ${time}`)
     setLastClickTime(time)
   }
-
-  // Initialize throttled function only once
   if (!throttledClick.current) {
-    throttledClick.current = throttle(handleClick, 2000)
+    throttledClick.current = throttle(handleClick, 20000)
   }
 
   return (

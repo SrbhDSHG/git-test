@@ -23,6 +23,7 @@ function DebouncInput() {
       console.log('Debonce value', newValue)
     }, 1000)
   }
+
   return (
     <div>
       <h2>Type something</h2>
